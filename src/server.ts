@@ -83,11 +83,10 @@ app.listen(PORT, () => {
   console.log(`Panel server running on port ${PORT}`);
 }).on('error', (err: NodeJS.ErrnoException) => {
   if (err.code === 'EADDRINUSE') {
-    console.error(`\n❌ Port ${PORT} is already in use!`);
+    console.error(`\nPort ${PORT} is already in use`);
     console.error(`   Please either:`);
-    console.error(`   1. Stop the process using port ${PORT}`);
-    console.error(`   2. Set a different port via PORT environment variable: PORT=3002 yarn serve`);
-    console.error(`   3. Or add "port": <number> to your config.json\n`);
+    console.error(`   Stop the process using port ${PORT}`);
+    console.error(`   Or add "port": <number> to your config.json\n`);
     process.exit(1);
   } else {
     console.error('Server error:', err);
