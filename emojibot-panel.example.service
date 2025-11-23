@@ -1,0 +1,19 @@
+[Unit]
+Description=EmojiBot2 Admin Panel
+
+After=network.target
+
+[Service]
+User=collabvm
+Group=collabvm
+Type=simple
+
+WorkingDirectory=/srv/collabvm/bots/EmojiBot/panel
+ExecStart=/bin/node dist/server.js
+
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
