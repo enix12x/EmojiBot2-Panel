@@ -1,5 +1,6 @@
 [Unit]
 Description=EmojiBot2 Admin Panel
+Wants=EmojiBot.service
 
 After=network.target
 
